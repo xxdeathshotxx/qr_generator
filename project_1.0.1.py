@@ -1,5 +1,5 @@
 import qrcode
-from PIL import Image
+from PIL import Image   // make sure you have already installed pillow library
 
 qr = qrcode.QRCode(
     version=1,
@@ -8,10 +8,10 @@ qr = qrcode.QRCode(
     box_size=10
 )
 
-qr.add_data("https://www.youtube.com/watch?v=Z90Ieb8Oj1c")
+qr.add_data("       paste") // paste your urls
 qr.make(fit=True)
 
-img = qr.make_image(fill_color="black", back_color="white")
+img = qr.make_image(fill_color="black", back_color="white")      // you can change colour according to your wish
 
-img.save("ww.png")
+img.save("ww.png")        // choose any name to save your qr
 img.show()   # 👈 this opens the image
